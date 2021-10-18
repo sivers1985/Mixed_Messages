@@ -14,3 +14,6 @@ const quotes = new Array(
 	"Act as if what you do makes a difference. It does. -William James"
 );
 // console.log(quotes[0]);
+
+const getRandomIndex = () => Math.floor(Math.random() * 13);
+// console.log(getRandomIndex());
