@@ -13,7 +13,17 @@ const quotes = new Array(
 	"Be miserable. Or motivate yourself. Whatever has to be done, it’s always your choice. -Wayne Dyer",
 	"Act as if what you do makes a difference. It does. -William James"
 );
-// console.log(quotes[0]);
 
-const getRandomIndex = () => Math.floor(Math.random() * 13);
-// console.log(getRandomIndex());
+const generateMessage = () => {
+    let randomNum1 = Math.floor(Math.random() * 12);
+    let randomNum2 = Math.floor(Math.random() * 11);
+    let message1 = quotes[randomNum1];
+    quotes.splice(randomNum1, 1);
+    let message2 = quotes[randomNum2];
+    quotes.splice(randomNum2, 1);
+    let message3 = quotes[Math.floor(Math.random() * 10)];
+
+    console.log(message1 + '\n' + message2 + '\n' + message3);
+};
+
+generateMessage();
